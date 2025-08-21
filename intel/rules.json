@@ -1,0 +1,27 @@
+[
+    {
+        "keyword": "powershell",
+        "severity": "medium",
+        "description": "Suspicious PowerShell execution"
+    },
+    {
+        "keyword": "cmd.exe",
+        "severity": "low",
+        "description": "Command prompt executed"
+    },
+    {
+        "keyword": "C:\\Users\\",
+        "severity": "medium",
+        "description": "User folder file operation"
+    },
+    {
+        "keyword": "malware.exe",
+        "severity": "high",
+        "description": "Known malicious executable"
+    },
+    {
+        "keyword": "192.168.1.",
+        "severity": "low",
+        "description": "Internal network access"
+    }
+]

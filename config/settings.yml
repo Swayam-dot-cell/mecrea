@@ -1,0 +1,61 @@
+# ========================
+#  Mini Blue Team Settings
+# ========================
+
+general:
+  log_level: INFO
+  save_logs: true
+  storage_path: "logs/"        # folder where raw logs are stored
+  database_url: "sqlite:///data/security_events.db"
+
+monitors:
+  sysmon:
+    enabled: true
+    log_path: "C:/Windows/System32/winevt/Logs/Security.evtx"  # adjust for Linux if needed
+    interval: 5     # seconds
+
+  tshark:
+    enabled: true
+    interface: "Wi-Fi"   # or eth0 on Linux
+    capture_filter: "ip" # BPF filter, can be changed
+    interval: 5
+
+  suricata:
+    enabled: true
+    log_path: "/var/log/suricata/eve.json"  # adjust to your Suricata path
+    interval: 5
+
+processors:
+  anomaly_detection:
+    enabled: true
+    model: "isolation_forest"
+    sensitivity: high     # low, medium, high
+
+  threat_intel:
+    enabled: true
+    feeds:
+      - "https://feodotracker.abuse.ch/downloads/ipblocklist.json"
+      - "https://sslbl.abuse.ch/blacklist/sslipblacklist.csv"
+
+firewall:
+  enabled: true
+  block_duration: 3600   # seconds to keep an IP blocked
+  provider: "system"     # system | custom_iptables | windows_fw
+
+alerts:
+  console:
+    enabled: true
+  file:
+    enabled: true
+    path: "alerts/alerts.log"
+  email:
+    enabled: false
+    smtp_server: "smtp.gmail.com"
+    smtp_port: 587
+    username: "your_email@gmail.com"
+    password: "your_app_password"
+    recipient: "security_team@domain.com"
+  webhook:
+    enabled: false
+    url: "https://your-webhook-url"
+

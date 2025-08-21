@@ -1,0 +1,538 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Blue Team Cybersecurity Dashboard</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap');
+  /* Reset */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: #120c2f;
+    color: #e0e0e0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    color: #9b59b6;
+    margin: 0 0 1rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 3rem 1.5rem;
+  }
+  /* Tabs */
+  .tabs {
+    display: flex;
+    border-bottom: 2px solid #2a1a4a;
+    margin-bottom: 1.5rem;
+  }
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: #9b59b6;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  .tab:hover {
+    color: #d18fff;
+  }
+  .tab.active {
+    border-bottom-color: #9b59b6;
+    color: #d18fff;
+  }
+  /* Sections */
+  section {
+    display: none;
+    animation: fadeIn 0.5s ease forwards;
+  }
+  section.active {
+    display: block;
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a0a3a;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px #3a1a6a;
+  }
+  thead {
+    background: #2a1a4a;
+  }
+  thead th {
+    padding: 0.75rem 1rem;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    color: #d18fff;
+    text-align: left;
+    border-bottom: 1px solid #3a1a6a;
+  }
+  tbody tr {
+    border-bottom: 1px solid #3a1a6a;
+    transition: background-color 0.3s ease;
+    cursor: default;
+  }
+  tbody tr:hover {
+    background: #3a1a6a;
+  }
+  tbody td {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+  /* Neon highlights */
+  .critical {
+    color: #39ff14; /* neon green */
+    font-weight: 700;
+  }
+  .critical.red {
+    color: #ff3131; /* neon red */
+  }
+  /* Alerts panel */
+  .alerts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .alert-item {
+    background: #1a0a3a;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 10px #3a1a6a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.3s ease;
+    cursor: default;
+  }
+  .alert-item:hover {
+    box-shadow: 0 0 20px #9b59b6;
+  }
+  .alert-desc {
+    font-size: 0.9rem;
+    color: #ccc;
+    max-width: 75%;
+  }
+  .severity {
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    user-select: none;
+  }
+  .severity.high {
+    background: #ff3131;
+    color: #fff;
+    box-shadow: 0 0 8px #ff3131;
+  }
+  .severity.medium {
+    background: #f1c40f;
+    color: #222;
+    box-shadow: 0 0 8px #f1c40f;
+  }
+  .severity.low {
+    background: #39ff14;
+    color: #222;
+    box-shadow: 0 0 8px #39ff14;
+  }
+  /* Vulnerabilities table */
+  .vuln-desc {
+    max-width: 400px;
+    color: #ccc;
+  }
+  /* PDF Button */
+  .btn-pdf {
+    display: inline-block;
+    background: linear-gradient(90deg, #9b59b6, #d18fff);
+    color: #120c2f;
+    font-weight: 700;
+    font-family: 'Orbitron', sans-serif;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px #9b59b6;
+    transition: filter 0.3s ease;
+    user-select: none;
+    margin-bottom: 1.5rem;
+  }
+  .btn-pdf:hover {
+    filter: brightness(1.2);
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    .alerts-list {
+      padding: 0 0.5rem;
+    }
+    table {
+      font-size: 0.75rem;
+    }
+    .vuln-desc {
+      max-width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main" aria-label="Blue Team Cybersecurity Dashboard">
+    <h1>Blue Team Cybersecurity Dashboard</h1>
+    <nav class="tabs" role="tablist" aria-label="Dashboard Sections">
+      <button class="tab active" role="tab" aria-selected="true" aria-controls="events" id="tab-events" tabindex="0">Events</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="alerts" id="tab-alerts" tabindex="-1">Alerts</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="vulnerabilities" id="tab-vulnerabilities" tabindex="-1">Vulnerabilities</button>
+    </nav>
+    <button class="btn-pdf" id="downloadPdf" aria-label="Download all logs, alerts, and vulnerabilities as PDF">Download Report PDF</button>
+
+    <section id="events" class="active" role="tabpanel" aria-labelledby="tab-events" tabindex="0">
+      <h2>Event Logs</h2>
+      <table aria-describedby="events-desc" role="table">
+        <caption id="events-desc" class="sr-only">Recent cybersecurity event logs with time, source, and event description</caption>
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Source</th>
+            <th scope="col">Event</th>
+          </tr>
+        </thead>
+        <tbody id="eventsTableBody">
+          <!-- JS will populate -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="alerts" role="tabpanel" aria-labelledby="tab-alerts" tabindex="0" hidden>
+      <h2>Alerts Panel</h2>
+      <ul class="alerts-list" id="alertsList" aria-live="polite" aria-relevant="additions">
+        <!-- JS will populate -->
+      </ul>
+    </section>
+
+    <section id="vulnerabilities" role="tabpanel" aria-labelledby="tab-vulnerabilities" tabindex="0" hidden>
+      <h2>Vulnerabilities</h2>
+      <table aria-describedby="vuln-desc" role="table">
+        <caption id="vuln-desc" class="sr-only">List of vulnerabilities with severity and description</caption>
+        <thead>
+          <tr>
+            <th scope="col">Severity</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tbody id="vulnTableBody">
+          <!-- JS will populate -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+    // Data simulation
+    const eventsData = [
+      {time: '2024-06-01 14:23:45', source: 'Firewall', event: 'Blocked suspicious inbound connection', critical: 'green'},
+      {time: '2024-06-01 14:25:12', source: 'IDS', event: 'Multiple failed login attempts detected', critical: 'red'},
+      {time: '2024-06-01 14:30:05', source: 'Antivirus', event: 'Malware signature detected and quarantined', critical: 'green'},
+      {time: '2024-06-01 14:35:22', source: 'SIEM', event: 'Unusual data exfiltration pattern', critical: 'red'},
+      {time: '2024-06-01 14:40:00', source: 'VPN', event: 'New device connected from unknown IP', critical: 'yellow'},
+      {time: '2024-06-01 14:45:10', source: 'Firewall', event: 'Port scan detected and blocked', critical: 'green'},
+      {time: '2024-06-01 14:50:33', source: 'IDS', event: 'Suspicious script execution detected', critical: 'red'},
+      {time: '2024-06-01 14:55:47', source: 'Antivirus', event: 'Virus definition updated', critical: 'green'},
+      {time: '2024-06-01 15:00:00', source: 'SIEM', event: 'User privilege escalation attempt', critical: 'red'},
+      {time: '2024-06-01 15:05:15', source: 'VPN', event: 'VPN connection dropped unexpectedly', critical: 'yellow'}
+    ];
+
+    const alertsData = [
+      {desc: 'Ransomware attack detected on endpoint 192.168.1.45', severity: 'high'},
+      {desc: 'Outdated software version on server srv-12', severity: 'medium'},
+      {desc: 'Phishing email campaign targeting employees', severity: 'high'},
+      {desc: 'Weak password policy detected in domain', severity: 'medium'},
+      {desc: 'Unpatched vulnerability in web application', severity: 'high'},
+      {desc: 'Suspicious network traffic from unknown IP', severity: 'low'},
+      {desc: 'Expired SSL certificate on mail server', severity: 'low'}
+    ];
+
+    const vulnerabilitiesData = [
+      {severity: 'High', description: 'SQL Injection vulnerability in customer login portal allowing data leakage.'},
+      {severity: 'Medium', description: 'Cross-Site Scripting (XSS) vulnerability in user comments section.'},
+      {severity: 'Low', description: 'Outdated third-party library with minor security issues.'},
+      {severity: 'High', description: 'Unencrypted sensitive data transmission detected in internal API.'},
+      {severity: 'Medium', description: 'Default credentials found on backup server.'},
+      {severity: 'Low', description: 'Information disclosure via verbose error messages.'}
+    ];
+
+    // DOM references
+    const eventsTableBody = document.getElementById('eventsTableBody');
+    const alertsList = document.getElementById('alertsList');
+    const vulnTableBody = document.getElementById('vulnTableBody');
+
+    // Populate Events Table
+    function populateEvents() {
+      eventsTableBody.innerHTML = '';
+      eventsData.forEach(({time, source, event, critical}) => {
+        const tr = document.createElement('tr');
+        const timeTd = document.createElement('td');
+        timeTd.textContent = time;
+        const sourceTd = document.createElement('td');
+        sourceTd.textContent = source;
+        const eventTd = document.createElement('td');
+        eventTd.textContent = event;
+        if(critical === 'green') {
+          eventTd.classList.add('critical');
+        } else if(critical === 'red') {
+          eventTd.classList.add('critical', 'red');
+        } else if(critical === 'yellow') {
+          eventTd.style.color = '#f1c40f'; // neon yellow
+          eventTd.style.fontWeight = '700';
+        }
+        tr.appendChild(timeTd);
+        tr.appendChild(sourceTd);
+        tr.appendChild(eventTd);
+        eventsTableBody.appendChild(tr);
+      });
+    }
+
+    // Populate Alerts Panel
+    function populateAlerts() {
+      alertsList.innerHTML = '';
+      alertsData.forEach(({desc, severity}) => {
+        const li = document.createElement('li');
+        li.className = 'alert-item';
+        const descDiv = document.createElement('div');
+        descDiv.className = 'alert-desc';
+        descDiv.textContent = desc;
+        const sevSpan = document.createElement('span');
+        sevSpan.className = 'severity ' + severity;
+        sevSpan.textContent = severity.charAt(0).toUpperCase() + severity.slice(1);
+        li.appendChild(descDiv);
+        li.appendChild(sevSpan);
+        alertsList.appendChild(li);
+      });
+    }
+
+    // Populate Vulnerabilities Table
+    function populateVulnerabilities() {
+      vulnTableBody.innerHTML = '';
+      vulnerabilitiesData.forEach(({severity, description}) => {
+        const tr = document.createElement('tr');
+        const sevTd = document.createElement('td');
+        sevTd.textContent = severity;
+        sevTd.className = 'severity ' + severity.toLowerCase();
+        const descTd = document.createElement('td');
+        descTd.textContent = description;
+        descTd.className = 'vuln-desc';
+        tr.appendChild(sevTd);
+        tr.appendChild(descTd);
+        vulnTableBody.appendChild(tr);
+      });
+    }
+
+    // Tab switching logic
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('section');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+          t.setAttribute('tabindex', '-1');
+        });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        tab.setAttribute('tabindex', '0');
+
+        sections.forEach(section => {
+          if(section.id === tab.getAttribute('aria-controls')) {
+            section.classList.add('active');
+            section.removeAttribute('hidden');
+            section.focus();
+          } else {
+            section.classList.remove('active');
+            section.setAttribute('hidden', '');
+          }
+        });
+      });
+    });
+
+    // PDF generation using jsPDF (embedded)
+    // Minimal external dependency: jsPDF from CDN
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script>
+    // Wait for DOM and jsPDF to load
+    window.onload = () => {
+      populateEvents();
+      populateAlerts();
+      populateVulnerabilities();
+
+      const { jsPDF } = window.jspdf;
+
+      document.getElementById('downloadPdf').addEventListener('click', () => {
+        const doc = new jsPDF({
+          unit: 'pt',
+          format: 'a4',
+          putOnlyUsedFonts:true,
+          floatPrecision: 16
+        });
+
+        const margin = 40;
+        let y = margin;
+
+        doc.setFont('Orbitron', 'bold');
+        doc.setFontSize(22);
+        doc.setTextColor('#9b59b6');
+        doc.text('Blue Team Cybersecurity Dashboard Report', margin, y);
+        y += 30;
+
+        doc.setFont('Roboto', 'normal');
+        doc.setFontSize(12);
+        doc.setTextColor('#000000');
+
+        // Events Section
+        doc.setDrawColor(155, 89, 182);
+        doc.setFillColor(230, 230, 250);
+        doc.rect(margin - 10, y - 20, 520, 20, 'F');
+        doc.setTextColor('#9b59b6');
+        doc.setFont('Orbitron', 'bold');
+        doc.text('Event Logs', margin, y);
+        y += 25;
+
+        doc.setFont('Roboto', 'normal');
+        doc.setTextColor('#000000');
+        // Table header
+        doc.setFont(undefined, 'bold');
+        doc.text('Time', margin, y);
+        doc.text('Source', margin + 150, y);
+        doc.text('Event', margin + 300, y);
+        y += 10;
+        doc.setLineWidth(0.5);
+        doc.line(margin - 10, y, margin + 510, y);
+        y += 10;
+        doc.setFont(undefined, 'normal');
+
+        eventsData.forEach(({time, source, event, critical}) => {
+          if(y > 750) {
+            doc.addPage();
+            y = margin;
+          }
+          doc.text(time, margin, y);
+          doc.text(source, margin + 150, y);
+          // Color event text based on critical
+          if(critical === 'green') {
+            doc.setTextColor(57, 255, 20);
+          } else if(critical === 'red') {
+            doc.setTextColor(255, 49, 49);
+          } else if(critical === 'yellow') {
+            doc.setTextColor(241, 196, 15);
+          } else {
+            doc.setTextColor(0,0,0);
+          }
+          doc.text(event, margin + 300, y);
+          doc.setTextColor(0,0,0);
+          y += 15;
+        });
+
+        y += 20;
+        // Alerts Section
+        doc.setDrawColor(155, 89, 182);
+        doc.setFillColor(230, 230, 250);
+        doc.rect(margin - 10, y - 20, 520, 20, 'F');
+        doc.setTextColor('#9b59b6');
+        doc.setFont('Orbitron', 'bold');
+        doc.text('Alerts Panel', margin, y);
+        y += 25;
+
+        doc.setFont('Roboto', 'normal');
+        doc.setTextColor('#000000');
+
+        alertsData.forEach(({desc, severity}) => {
+          if(y > 750) {
+            doc.addPage();
+            y = margin;
+          }
+          // Severity color
+          if(severity === 'high') {
+            doc.setTextColor(255, 49, 49);
+          } else if(severity === 'medium') {
+            doc.setTextColor(241, 196, 15);
+          } else if(severity === 'low') {
+            doc.setTextColor(57, 255, 20);
+          } else {
+            doc.setTextColor(0,0,0);
+          }
+          doc.text(`${severity.toUpperCase()}:`, margin, y);
+          doc.setTextColor(0,0,0);
+          doc.text(desc, margin + 70, y, {maxWidth: 440});
+          y += 20;
+        });
+
+        y += 20;
+        // Vulnerabilities Section
+        doc.setDrawColor(155, 89, 182);
+        doc.setFillColor(230, 230, 250);
+        doc.rect(margin - 10, y - 20, 520, 20, 'F');
+        doc.setTextColor('#9b59b6');
+        doc.setFont('Orbitron', 'bold');
+        doc.text('Vulnerabilities', margin, y);
+        y += 25;
+
+        doc.setFont('Roboto', 'normal');
+        doc.setTextColor('#000000');
+
+        vulnerabilitiesData.forEach(({severity, description}) => {
+          if(y > 750) {
+            doc.addPage();
+            y = margin;
+          }
+          // Severity color
+          if(severity.toLowerCase() === 'high') {
+            doc.setTextColor(255, 49, 49);
+          } else if(severity.toLowerCase() === 'medium') {
+            doc.setTextColor(241, 196, 15);
+          } else if(severity.toLowerCase() === 'low') {
+            doc.setTextColor(57, 255, 20);
+          } else {
+            doc.setTextColor(0,0,0);
+          }
+          doc.text(severity.toUpperCase(), margin, y);
+          doc.setTextColor(0,0,0);
+          doc.text(description, margin + 100, y, {maxWidth: 430});
+          y += 20;
+        });
+
+        doc.save('blue-team-cybersecurity-report.pdf');
+      });
+    };
+  </script>
+</body>
+</html>
