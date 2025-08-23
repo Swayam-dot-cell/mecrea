@@ -10,7 +10,8 @@ app = FastAPI(title="Blue Team Dashboard API")
 # --- Paths ---
 DB_PATH = "storage/events.db"
 ALERT_FILE = "storage/alerts.log"
-DASHBOARD_PATH = Path("dashboard/index.html")
+DASHBOARD_PATH = Path("index.html")
+
 
 # --- Helper functions ---
 
