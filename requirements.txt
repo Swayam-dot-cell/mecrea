@@ -1,0 +1,33 @@
+# --- Core Framework ---
+fastapi
+uvicorn[standard]
+pydantic
+
+# --- Database & Storage ---
+sqlite3-binary
+sqlalchemy
+
+# --- Monitoring & System ---
+psutil
+watchdog
+
+# --- File & Config Handling ---
+python-multipart
+pyyaml
+
+# --- Networking / Security ---
+requests
+scapy
+pyshark
+
+# --- Logging & Alerts ---
+rich
+loguru
+
+# --- Frontend Integration (API -> UI) ---
+jinja2
+python-dotenv
+
+# --- Optional Enhancements ---
+pandas
+matplotlib
