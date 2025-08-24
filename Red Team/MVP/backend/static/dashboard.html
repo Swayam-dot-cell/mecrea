@@ -1,0 +1,14 @@
+<button onclick="startAll()">Initiate Full Assessment</button>
+<script>
+async function startAll(){
+  // 1. kick off red team
+  await fetch('/run_red', {method: 'POST'});
+  // 2. run blue team
+  await fetch('/run_blue', {method: 'POST'});
+  // 3. run ai
+  await fetch('/run_ai', {method: 'POST'});
+  // 4. build report (json + pdf)
+  await fetch('/build_report', {method: 'POST'});
+  alert('Pipeline triggered — final_report.json and final_report.pdf will be generated.');
+}
+</script>

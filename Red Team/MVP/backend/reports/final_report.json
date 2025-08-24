@@ -1,0 +1,45 @@
+{
+    "attack_summary": [
+        "[2025-08-24 10:09:09] Red Team attacks started on https://google.com",
+        "[2025-08-24 10:11:20] Red Team attacks started on google.com",
+        "[2025-08-24 10:49:28] Red Team attacks started on google.com",
+        "[2025-08-24 10:52:05] Red Team attacks started on www.tryhackme.com",
+        "[2025-08-24 12:33:29] Red Team attacks started on https://stackoverflow.com/questions/34902378/where-do-i-get-secret-key-for-flask",
+        "[2025-08-24 13:57:52] Red Team attacks started on http://www.google.com",
+        "[2025-08-24 13:58:12] Red Team attacks started on http://www.google.com",
+        "[2025-08-24 13:58:21] Red Team attacks started on http://www.google.com",
+        "[2025-08-24 14:03:58] \ud83d\ude80 Red Team attacks started on http://httpbin.org",
+        "[2025-08-24 14:05:08] \ud83d\ude80 Red Team attacks started on http://httpbin.org",
+        "[2025-08-24 14:17:05] [START] Red Team attacks started on http://httpbin.org",
+        "[2025-08-24 14:18:03] [START] Red Team attacks started on http://httpbin.org"
+    ],
+    "defense_summary": [
+        "[2025-08-24 10:09:16] Blue Team defenses started.",
+        "[2025-08-24 10:09:18] Blue Team defenses started.",
+        "[2025-08-24 10:09:18] Blue Team defenses started.",
+        "[2025-08-24 10:09:19] Blue Team defenses started.",
+        "[2025-08-24 10:09:19] Blue Team defenses started.",
+        "[2025-08-24 10:09:19] Blue Team defenses started.",
+        "[2025-08-24 10:09:21] Blue Team defenses started.",
+        "[2025-08-24 10:09:23] Blue Team defenses started.",
+        "[2025-08-24 10:09:23] Blue Team defenses started.",
+        "[2025-08-24 10:12:12] Blue Team defenses started.",
+        "[2025-08-24 10:12:14] Blue Team defenses started.",
+        "[2025-08-24 10:12:14] Blue Team defenses started.",
+        "[2025-08-24 10:12:14] Blue Team defenses started.",
+        "[2025-08-24 10:12:14] Blue Team defenses started.",
+        "[2025-08-24 10:12:15] Blue Team defenses started.",
+        "[2025-08-24 10:12:17] Blue Team defenses started.",
+        "[2025-08-24 10:12:18] Blue Team defenses started.",
+        "[2025-08-24 10:12:19] Blue Team defenses started.",
+        "[2025-08-24 10:12:19] Blue Team defenses started.",
+        "[2025-08-24 10:12:19] Blue Team defenses started."
+    ],
+    "ai_suggestions": [
+        "Error generating AI insights: module 'openai' has no attribute 'ChatCompletion'"
+    ],
+    "metadata": {
+        "generated_at": "2025-08-24 14:19:00",
+        "total_lines": 279
+    }
+}

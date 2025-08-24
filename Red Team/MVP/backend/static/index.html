@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="abc.css">
+  <meta charset="UTF-8">
+  <title>Quantumlock - Red Team Dashboard</title>
+</head>
+<body>
+  <h1>Quantumlock.</h1>
+
+  <div class="target-section">
+    <label for="target">Target URL:</label>
+    <input type="text" id="target" placeholder="http://example.com" value="http://example.com">
+    <button onclick="saveTarget()">Save Target</button>
+  </div>
+
+  <div class="attack-section">
+    <h2>Red Team Attacks</h2>
+    <button id="redTeamBtn" onclick="runRedTeam()" class="attack-btn">Initiate Red Team Attacks</button>
+    <div id="attackStatus" class="status-display" style="display: none;">
+      <div class="spinner"></div>
+      <span>Executing attacks on target...</span>
+    </div>
+  </div>
+
+  <div class="defense-section">
+    <h2>Blue Team Defenses</h2>
+    <button onclick="runBlueTeam()">Initiate Blue Team Defenses</button>
+  </div>
+
+  <div class="reports-section">
+    <h2>Reports</h2>
+    <button onclick="generateReport()">Generate Report</button>
+    <button onclick="downloadFile('final_report.pdf')">Download PDF</button>
+    <button onclick="downloadFile('final_report.json')">Download JSON</button>
+  </div>
+
+  <div class="logs-section">
+    <h2>Attack Logs</h2>
+    <div class="log-controls">
+      <button onclick="refreshLogs()">Refresh Logs</button>
+      <button onclick="clearLogs()">Clear Logs</button>
+      <button onclick="autoRefresh()">Auto-refresh</button>
+    </div>
+    <div class="log-container">
+      <pre id="logs" class="log-content"></pre>
+    </div>
+  </div>
+
+  <script>
+    let target = "http://example.com";
+    let autoRefreshInterval = null;
+
+    function saveTarget() {
+      target = document.getElementById("target").value || "http://example.com";
+      if (!target.startsWith("http://") && !target.startsWith("https://")) {
+        target = "http://" + target;
+        document.getElementById("target").value = target;
+      }
+      alert("Target set to: " + target);
+    }
+
+    async function runRedTeam() {
+      if (!target || target === "http://example.com") {
+        alert("Please set a valid target URL first!");
+        return;
+      }
+
+      const btn = document.getElementById("redTeamBtn");
+      const status = document.getElementById("attackStatus");
+      
+      // Disable button and show status
+      btn.disabled = true;
+      btn.textContent = "Attacks Running...";
+      status.style.display = "block";
+      
+      try {
+        const res = await fetch("/run_red_team", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ target })
+        });
+        const data = await res.json();
+        
+        if (res.ok) {
+          alert(`SUCCESS: ${data.message}\nTarget: ${data.target}`);
+          // Auto-refresh logs to show attack progress
+          refreshLogs();
+          // Continue refreshing for a few seconds to show real-time progress
+          setTimeout(() => refreshLogs(), 2000);
+          setTimeout(() => refreshLogs(), 5000);
+        } else {
+          alert("ERROR: " + (data.error || "Unknown error"));
+        }
+      } catch (err) {
+        alert("ERROR running red team: " + err);
+      } finally {
+        // Re-enable button and hide status
+        btn.disabled = false;
+        btn.textContent = "Initiate Red Team Attacks";
+        status.style.display = "none";
+      }
+    }
+
+    async function runBlueTeam() {
+      try {
+        const res = await fetch("/run_blue_team", {
+          method: "POST"
+        });
+        const data = await res.json();
+        alert("SUCCESS: " + data.message);
+        refreshLogs();
+      } catch (err) {
+        alert("ERROR running blue team: " + err);
+      }
+    }
+
+    async function refreshLogs() {
+      try {
+        const res = await fetch("/logs");
+        const data = await res.json();
+        const logsElement = document.getElementById("logs");
+        
+        if (data.logs) {
+          logsElement.textContent = data.logs;
+          // Auto-scroll to bottom
+          logsElement.scrollTop = logsElement.scrollHeight;
+        } else {
+          logsElement.textContent = "No logs yet. Run some attacks to see activity.";
+        }
+      } catch (err) {
+        document.getElementById("logs").textContent = "Error fetching logs: " + err;
+      }
+    }
+
+    function clearLogs() {
+      if (confirm("Are you sure you want to clear all logs?")) {
+        document.getElementById("logs").textContent = "Logs cleared.";
+      }
+    }
+
+    function autoRefresh() {
+      const btn = event.target;
+      if (autoRefreshInterval) {
+        clearInterval(autoRefreshInterval);
+        autoRefreshInterval = null;
+        btn.textContent = "Auto-refresh";
+        btn.style.background = "#4CAF50";
+      } else {
+        autoRefreshInterval = setInterval(refreshLogs, 3000);
+        btn.textContent = "Stop Auto-refresh";
+        btn.style.background = "#f44336";
+      }
+    }
+
+    async function generateReport() {
+      try {
+        const res = await fetch("/generate_report", { method: "POST" });
+        const data = await res.json();
+        alert("SUCCESS: " + data.message);
+        refreshLogs();
+      } catch (err) {
+        alert("ERROR generating report: " + err);
+      }
+    }
+
+    function downloadFile(filename) {
+      window.location.href = "/download/" + filename;
+    }
+
+    // Initial load
+    refreshLogs();
+    
+    // Auto-refresh logs every 10 seconds by default
+    setInterval(refreshLogs, 10000);
+  </script>
+</body>
+</html>

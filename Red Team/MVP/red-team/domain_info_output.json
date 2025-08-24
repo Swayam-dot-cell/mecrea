@@ -1,0 +1,56 @@
+{
+  "domain": "httpbin.org",
+  "ip": "54.209.231.157",
+  "geo_info": {
+    "status": "success",
+    "continent": "North America",
+    "continentCode": "NA",
+    "country": "United States",
+    "countryCode": "US",
+    "region": "VA",
+    "regionName": "Virginia",
+    "city": "Ashburn",
+    "district": "Virginia",
+    "zip": "20149",
+    "lat": 39.0438,
+    "lon": -77.4874,
+    "timezone": "America/New_York",
+    "offset": -14400,
+    "currency": null,
+    "isp": "Amazon.com, Inc.",
+    "org": "AWS EC2 (us-east-1)",
+    "as": "AS14618 Amazon.com, Inc.",
+    "asname": "AMAZON-AES",
+    "reverse": "ec2-54-209-231-157.compute-1.amazonaws.com",
+    "mobile": false,
+    "proxy": false,
+    "hosting": true,
+    "query": "54.209.231.157"
+  },
+  "ownership": {
+    "registrar": "Amazon Registrar, Inc.",
+    "creation_date": "2011-06-12 21:57:10",
+    "expiration_date": "2026-06-12 21:57:10",
+    "name_servers": [
+      "ns-1053.awsdns-03.org",
+      "ns-1555.awsdns-02.co.uk",
+      "ns-173.awsdns-21.com",
+      "ns-884.awsdns-46.net"
+    ]
+  },
+  "dns": {
+    "A": "54.209.231.157",
+    "MX": [
+      "54.209.231.157",
+      "52.202.31.94",
+      "52.1.207.236",
+      "34.206.168.163"
+    ],
+    "NS": [
+      "54.209.231.157",
+      "52.202.31.94",
+      "52.1.207.236",
+      "34.206.168.163"
+    ]
+  }
+}
