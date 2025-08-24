@@ -1,0 +1,5 @@
+{
+  "add_waf_rule.py": "\u26a0\ufe0f Script blue-team\\defense\\add_waf_rule.py not found.",
+  "block_ip.py": "\u26a0\ufe0f Script blue-team\\defense\\block_ip.py not found.",
+  "rate_limit.py": "\u26a0\ufe0f Script blue-team\\defense\\rate_limit.py not found."
+}

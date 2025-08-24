@@ -1,0 +1,292 @@
+[2025-08-24 10:09:09] Red Team attacks started on https://google.com
+[2025-08-24 10:09:16] Blue Team defenses started.
+[2025-08-24 10:09:18] Blue Team defenses started.
+[2025-08-24 10:09:18] Blue Team defenses started.
+[2025-08-24 10:09:19] Blue Team defenses started.
+[2025-08-24 10:09:19] Blue Team defenses started.
+[2025-08-24 10:09:19] Blue Team defenses started.
+[2025-08-24 10:09:21] Blue Team defenses started.
+[2025-08-24 10:09:23] Blue Team defenses started.
+[2025-08-24 10:09:23] Blue Team defenses started.
+[2025-08-24 10:09:23] Reports generated successfully.
+[2025-08-24 10:11:20] Red Team attacks started on google.com
+[2025-08-24 10:12:01] Reports generated successfully.
+[2025-08-24 10:12:12] Blue Team defenses started.
+[2025-08-24 10:12:14] Blue Team defenses started.
+[2025-08-24 10:12:14] Blue Team defenses started.
+[2025-08-24 10:12:14] Blue Team defenses started.
+[2025-08-24 10:12:14] Blue Team defenses started.
+[2025-08-24 10:12:15] Blue Team defenses started.
+[2025-08-24 10:12:17] Blue Team defenses started.
+[2025-08-24 10:12:18] Blue Team defenses started.
+[2025-08-24 10:12:19] Blue Team defenses started.
+[2025-08-24 10:12:19] Blue Team defenses started.
+[2025-08-24 10:12:19] Blue Team defenses started.
+[2025-08-24 10:49:28] Red Team attacks started on google.com
+[2025-08-24 10:52:05] Red Team attacks started on www.tryhackme.com
+[2025-08-24 10:52:47] Reports generated successfully.
+[2025-08-24 12:33:29] Red Team attacks started on https://stackoverflow.com/questions/34902378/where-do-i-get-secret-key-for-flask
+[2025-08-24 13:57:52] Red Team attacks started on http://www.google.com
+[2025-08-24 13:57:52] Executing Form Flooding attack...
+[2025-08-24 13:58:12] Red Team attacks started on http://www.google.com
+[2025-08-24 13:58:12] Executing Form Flooding attack...
+[2025-08-24 13:58:14] Script output: [+] Starting form flooding attack on: http://www.google.com
+[+] Starting form flood attack on: http://www.google.com
+[+] Sending 50 requests using 8 threads
+[+] Form 2: Status 405 - Email: rshwiluuptlqaow@protonmail.com
+[+] Form 1: Status 405 - Email: N/A
+[+] Form 4: Status 405 - Email: byiapmcj@protonmail.com
+[+] Form 6: Status 405 - Email: vrsxlbsdraw@protonmail.com
+[+] Form 8: Status 405 - Email: clrdhblp@yahoo.com
+[+] Form 5: Status 405 - Email: N/A
+[+] Form 7: Status 405 - Email: N/A
+[+] Form 3: Status 405 - Email: N/A
+[+] Form 11: Status 405 - Email: N/A
+[+] Form 9: Status 405 - Email: ygmychak@yahoo.com
+[+] Form 10: Status 405 - Email: N/A
+[+] Form 13: Status 405 - Email: ztzdobndj@outlook.com
+[+] Form 12: Status 405 - Email: xknizgaovilx@tutanota.com
+[+] Form 15: Status 405 - Email: N/A
+[+] Form 16: Status 405 - Email: dffklygzeeiskxd@yahoo.com
+[+] Form 14: Status 405 - Email: bxeyfbkbpk@yahoo.com
+[+] Form 17: Status 405 - Email: jdhuangh@protonmail.com
+[+] Form 19: Status 405 - Email: N/A
+[+] Form 21: Status 405 - Email: N/A
+[+] Form 18: Status 405 - Email: dkajrjfqmwkbu@gmail.com
+[+] Form 20: Status 405 - Email: N/A
+[+] Form 23: Status 405 - Email: N/A
+[+] Form 22: Status 405 - Email: N/A
+[+] Form 24: Status 405 - Email: N/A
+[+] Form 25: Status 405 - Email: ifghvr@tutanota.com
+[+] Form 26: Status 405 - Email: N/A
+[+] Form 27: Status 405 - Email: N/A
+[+] Form 29: Status 405 - Email: N/A
+[+] Form 28: Status 405 - Email: N/A
+[+] Form 31: Status 405 - Email: N/A
+[+] Form 32: Status 405 - Email: N/A
+[+] Form 30: Status 405 - Email: N/A
+[+] Form 36: Status 405 - Email: N/A
+[+] Form 34: Status 405 - Email: N/A
+[+] Form 33: Status 405 - Email: N/A
+[+] Form 35: Status 405 - Email: N/A
+[+] Form 40: Status 405 - Email: N/A
+[+] Form 37: Status 405 - Email: yftqsgcg@yahoo.com
+[+] Form 38: Status 405 - Email: cback@outlook.com
+[+] Form 39: Status 405 - Email: yppcnis@tutanota.com
+[+] Form 44: Status 405 - Email: bxoiftuair@hotmail.com
+[+] Form 43: Status 405 - Email: atotvkbvlk@tutanota.com
+[+] Form 42: Status 405 - Email: N/A
+[+] Form 41: Status 405 - Email: ggivrhlgfdfon@outlook.com
+[+] Form 47: Status 405 - Email: N/A
+[+] Form 48: Status 405 - Email: jjufm@yahoo.com
+[+] Form 45: Status 405 - Email: N/A
+[+] Form 46: Status 405 - Email: N/A
+[+] Form 49: Status 405 - Email: dvzbnm@protonmail.com
+[+] Form 50: Status 405 - Email: N/A
+
+[+] Form flood attack completed!
+[+] Successful submissions: 50
+[+] Failed submissions: 0
+[+] Total time: 1.33 seconds
+[+] Average rate: 37.59 requests/second
+[2025-08-24 13:58:21] Red Team attacks started on http://www.google.com
+[2025-08-24 13:58:21] Executing Form Flooding attack...
+[2025-08-24 13:58:23] Script output: [+] Starting form flooding attack on: http://www.google.com
+[+] Starting form flood attack on: http://www.google.com
+[+] Sending 50 requests using 8 threads
+[+] Form 5: Status 405 - Email: N/A
+[+] Form 7: Status 405 - Email: N/A
+[+] Form 8: Status 405 - Email: qlebrvb@hotmail.com
+[+] Form 4: Status 405 - Email: snayg@tutanota.com
+[+] Form 6: Status 405 - Email: yohbyrw@gmail.com
+[+] Form 2: Status 405 - Email: N/A
+[+] Form 3: Status 405 - Email: nspqju@tutanota.com
+[+] Form 1: Status 405 - Email: N/A
+[+] Form 14: Status 405 - Email: N/A
+[+] Form 9: Status 405 - Email: N/A
+[+] Form 13: Status 405 - Email: fraciixgf@tutanota.com
+[+] Form 11: Status 405 - Email: rqohzvfycff@protonmail.com
+[+] Form 12: Status 405 - Email: vewlqinzhfok@tutanota.com
+[+] Form 15: Status 405 - Email: xesfackrl@outlook.com
+[+] Form 10: Status 405 - Email: N/A
+[+] Form 16: Status 405 - Email: N/A
+[+] Form 19: Status 405 - Email: N/A
+[+] Form 18: Status 405 - Email: fwhaoxo@protonmail.com
+[+] Form 24: Status 405 - Email: umhoxjehpzwmydk@outlook.com
+[+] Form 20: Status 405 - Email: lvvqveiwoyjc@outlook.com
+[+] Form 17: Status 405 - Email: N/A
+[+] Form 21: Status 405 - Email: otsqngzifeqlay@hotmail.com
+[+] Form 23: Status 405 - Email: N/A
+[+] Form 22: Status 405 - Email: N/A
+[+] Form 25: Status 405 - Email: pyfpaqhjnxsoykj@outlook.com
+[+] Form 26: Status 405 - Email: N/A
+[+] Form 31: Status 405 - Email: pvllbyktvmyteod@tutanota.com
+[+] Form 27: Status 405 - Email: pxghsxm@tutanota.com
+[+] Form 28: Status 405 - Email: N/A
+[+] Form 32: Status 405 - Email: N/A
+[+] Form 29: Status 405 - Email: N/A
+[+] Form 30: Status 405 - Email: oszqxkekp@hotmail.com
+[+] Form 33: Status 405 - Email: nylytkvb@outlook.com
+[+] Form 34: Status 405 - Email: mcotmnyvckkwfja@protonmail.com
+[+] Form 36: Status 405 - Email: N/A
+[+] Form 37: Status 405 - Email: bwmtpxyhz@gmail.com
+[+] Form 35: Status 405 - Email: N/A
+[+] Form 39: Status 405 - Email: ubfxauwbskgxcjz@tutanota.com
+[+] Form 38: Status 405 - Email: hgiumcxiqiva@yahoo.com
+[+] Form 40: Status 405 - Email: tsfwyfskiufdb@tutanota.com
+[+] Form 41: Status 405 - Email: N/A
+[+] Form 42: Status 405 - Email: N/A
+[+] Form 43: Status 405 - Email: N/A
+[+] Form 47: Status 405 - Email: N/A
+[+] Form 46: Status 405 - Email: N/A
+[+] Form 44: Status 405 - Email: N/A
+[+] Form 48: Status 405 - Email: N/A
+[+] Form 45: Status 405 - Email: mviqsnyqiwuxtr@outlook.com
+[+] Form 49: Status 405 - Email: pmxei@tutanota.com
+[+] Form 50: Status 405 - Email: N/A
+
+[+] Form flood attack completed!
+[+] Successful submissions: 50
+[+] Failed submissions: 0
+[+] Total time: 1.35 seconds
+[+] Average rate: 37.02 requests/second
+[2025-08-24 14:03:58] 🚀 Red Team attacks started on http://httpbin.org
+[2025-08-24 14:03:59] 🎯 Target test: Target accessible (Status: 200)
+[2025-08-24 14:03:59] ⚡ Executing Simple Test attack...
+[2025-08-24 14:03:59] 🔧 Executing: simple_test.py
+[SimpleTest] Attack completed on: http://httpbin.org
+[SimpleTest] Results: {'target': 'http://httpbin.org', 'attack_type': 'simple_test', 'timestamp': 1756024440.997799, 'status': 'success', 'data_collected': {'sample_data': 'test_data_2866', 'random_value': 0.13380222496083738}}
+
+[2025-08-24 14:04:01] 📤 Output: [+] Starting simple test attack on: http://httpbin.org
+[+] Simple test attack completed successfully for: http://httpbin.org...
+[2025-08-24 14:04:01] ✅ Simple Test: SUCCESS: [+] Starting simple test attack on: http://httpbin.org
+[+] Simple test attack completed successfully
+[2025-08-24 14:04:01] ⚡ Executing Domain Reconnaissance attack...
+[2025-08-24 14:04:01] 🔧 Executing: getdomain.py
+[2025-08-24 14:05:08] 🚀 Red Team attacks started on http://httpbin.org
+[2025-08-24 14:05:09] 🎯 Target test: Target accessible (Status: 200)
+[2025-08-24 14:05:09] ⚡ Executing Simple Test attack...
+[2025-08-24 14:05:09] 🔧 Executing: simple_test.py
+[SimpleTest] Attack completed on: http://httpbin.org
+[SimpleTest] Results: {'target': 'http://httpbin.org', 'attack_type': 'simple_test', 'timestamp': 1756024510.909945, 'status': 'success', 'data_collected': {'sample_data': 'test_data_8953', 'random_value': 0.6379757624956188}}
+
+[2025-08-24 14:05:10] 📤 Output: [+] Starting simple test attack on: http://httpbin.org
+[+] Simple test attack completed successfully for: http://httpbin.org...
+[2025-08-24 14:05:10] ✅ Simple Test: SUCCESS: [+] Starting simple test attack on: http://httpbin.org
+[+] Simple test attack completed successfully
+[2025-08-24 14:05:10] ⚡ Executing Domain Reconnaissance attack...
+[2025-08-24 14:05:10] 🔧 Executing: getdomain.py
+[2025-08-24 14:05:20] 📤 Output: [+] Resolved httpbin.org to IP: 54.209.231.157
+
+[+] Geo Info for 54.209.231.157:
+    status: success
+    continent: North America
+    continentCode: NA
+    country: United States
+    countryCode: US
+ ...
+[2025-08-24 14:05:20] ⚠️  Error: Traceback (most recent call last):
+  File "C:\Users\skarc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\urllib3\connection...
+[2025-08-24 14:05:20] ❌ Domain Reconnaissance: FAILED: Return code 1, Error: Traceback (most recent call last):
+  File "C:\Users\skarc\AppData\Local\Packages\PythonSoftwareFound
+[2025-08-24 14:05:20] ⚡ Executing Form Flooding attack...
+[2025-08-24 14:05:20] 🔧 Executing: formflooding.py
+[2025-08-24 14:05:26] 📤 Output: [+] Starting form flooding attack on: http://httpbin.org
+[+] Starting form flood attack on: http://httpbin.org
+[+] Sending 50 requests using 8 threads
+[+] Form 8: Status 405 - Email: N/A
+[+] Form 7: S...
+[2025-08-24 14:05:26] ✅ Form Flooding: SUCCESS: [+] Starting form flooding attack on: http://httpbin.org
+[+] Starting form flood attack on: http://h
+[2025-08-24 14:05:26] ⚡ Executing Honeytoken Deployment attack...
+[2025-08-24 14:05:26] 🔧 Executing: honeytoken.py
+[2025-08-24 14:07:26] ⏰ Script timed out after 2 minutes: honeytoken.py
+[2025-08-24 14:07:26] ❌ Honeytoken Deployment: FAILED: Script timed out after 2 minutes: honeytoken.py
+[2025-08-24 14:07:26] ⚡ Executing Passive Reconnaissance attack...
+[2025-08-24 14:07:26] 🔧 Executing: passiverecon.py
+[2025-08-24 14:17:05] [START] Red Team attacks started on http://httpbin.org
+[2025-08-24 14:17:06] [TARGET] Target accessible (Status: 200)
+[2025-08-24 14:17:06] [EXEC] Executing Simple Test attack...
+[2025-08-24 14:17:06] [EXEC] Executing: simple_test.py
+[SimpleTest] Attack completed on: http://httpbin.org
+[SimpleTest] Results: {'target': 'http://httpbin.org', 'attack_type': 'simple_test', 'timestamp': 1756025227.8110785, 'status': 'success', 'data_collected': {'sample_data': 'test_data_3720', 'random_value': 0.0014110872875859881}}
+
+[2025-08-24 14:17:07] [OUTPUT] [+] Starting simple test attack on: http://httpbin.org
+[+] Simple test attack completed successfully for: http://httpbin.org...
+[2025-08-24 14:17:07] [SUCCESS] Simple Test: SUCCESS: [+] Starting simple test attack on: http://httpbin.org
+[+] Simple test attack completed successfully
+[2025-08-24 14:17:07] [EXEC] Executing Domain Reconnaissance attack...
+[2025-08-24 14:17:07] [EXEC] Executing: getdomain.py
+[2025-08-24 14:17:17] [OUTPUT] [+] Resolved httpbin.org to IP: 52.202.31.94
+
+[+] Geo Info for 52.202.31.94:
+    status: success
+    continent: North America
+    continentCode: NA
+    country: United States
+    countryCode: US
+    r...
+[2025-08-24 14:17:17] [ERROR] Traceback (most recent call last):
+  File "C:\Users\skarc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\urllib3\connection...
+[2025-08-24 14:17:17] [FAILED] Domain Reconnaissance: FAILED: Return code 1, Error: Traceback (most recent call last):
+  File "C:\Users\skarc\AppData\Local\Packages\PythonSoftwareFound
+[2025-08-24 14:17:17] [EXEC] Executing Form Flooding attack...
+[2025-08-24 14:17:17] [EXEC] Executing: formflooding.py
+[2025-08-24 14:17:22] [OUTPUT] [+] Starting form flooding attack on: http://httpbin.org
+[+] Starting form flood attack on: http://httpbin.org
+[+] Sending 50 requests using 8 threads
+[+] Form 8: Status 405 - Email: injkmqvlyf@proton...
+[2025-08-24 14:17:22] [SUCCESS] Form Flooding: SUCCESS: [+] Starting form flooding attack on: http://httpbin.org
+[+] Starting form flood attack on: http://h
+[2025-08-24 14:17:22] [EXEC] Executing Honeytoken Deployment attack...
+[2025-08-24 14:17:22] [EXEC] Executing: honeytoken.py
+[2025-08-24 14:18:03] [START] Red Team attacks started on http://httpbin.org
+[2025-08-24 14:18:04] [TARGET] Target accessible (Status: 200)
+[2025-08-24 14:18:04] [EXEC] Executing Simple Test attack...
+[2025-08-24 14:18:04] [EXEC] Executing: simple_test.py
+[SimpleTest] Attack completed on: http://httpbin.org
+[SimpleTest] Results: {'target': 'http://httpbin.org', 'attack_type': 'simple_test', 'timestamp': 1756025285.2509854, 'status': 'success', 'data_collected': {'sample_data': 'test_data_2631', 'random_value': 0.17005473013321437}}
+
+[2025-08-24 14:18:05] [OUTPUT] [+] Starting simple test attack on: http://httpbin.org
+[+] Simple test attack completed successfully for: http://httpbin.org...
+[2025-08-24 14:18:05] [SUCCESS] Simple Test: SUCCESS: [+] Starting simple test attack on: http://httpbin.org
+[+] Simple test attack completed successfully
+[2025-08-24 14:18:05] [EXEC] Executing Domain Reconnaissance attack...
+[2025-08-24 14:18:05] [EXEC] Executing: getdomain.py
+[2025-08-24 14:18:14] [OUTPUT] [+] Resolved httpbin.org to IP: 54.209.231.157
+
+[+] Geo Info for 54.209.231.157:
+    status: success
+    continent: North America
+    continentCode: NA
+    country: United States
+    countryCode: US
+ ...
+[2025-08-24 14:18:14] [ERROR] Traceback (most recent call last):
+  File "C:\Users\skarc\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\urllib3\connection...
+[2025-08-24 14:18:14] [FAILED] Domain Reconnaissance: FAILED: Return code 1, Error: Traceback (most recent call last):
+  File "C:\Users\skarc\AppData\Local\Packages\PythonSoftwareFound
+[2025-08-24 14:18:14] [EXEC] Executing Form Flooding attack...
+[2025-08-24 14:18:14] [EXEC] Executing: formflooding.py
+[2025-08-24 14:18:20] [OUTPUT] [+] Starting form flooding attack on: http://httpbin.org
+[+] Starting form flood attack on: http://httpbin.org
+[+] Sending 50 requests using 8 threads
+[+] Form 6: Status 405 - Email: N/A
+[+] Form 5: S...
+[2025-08-24 14:18:20] [SUCCESS] Form Flooding: SUCCESS: [+] Starting form flooding attack on: http://httpbin.org
+[+] Starting form flood attack on: http://h
+[2025-08-24 14:18:20] [EXEC] Executing Honeytoken Deployment attack...
+[2025-08-24 14:18:20] [EXEC] Executing: honeytoken.py
+[2025-08-24 14:19:00] [SUCCESS] Reports generated successfully.
+[2025-08-24 14:20:20] [TIMEOUT] Script timed out after 2 minutes: honeytoken.py
+[2025-08-24 14:20:20] [FAILED] Honeytoken Deployment: FAILED: Script timed out after 2 minutes: honeytoken.py
+[2025-08-24 14:20:20] [EXEC] Executing Passive Reconnaissance attack...
+[2025-08-24 14:20:20] [EXEC] Executing: passiverecon.py
+[2025-08-24 14:22:20] [TIMEOUT] Script timed out after 2 minutes: passiverecon.py
+[2025-08-24 14:22:20] [FAILED] Passive Reconnaissance: FAILED: Script timed out after 2 minutes: passiverecon.py
+[2025-08-24 14:22:20] [EXEC] Executing Server Clogging attack...
+[2025-08-24 14:22:20] [EXEC] Executing: serverclog.py
+[2025-08-24 14:24:20] [TIMEOUT] Script timed out after 2 minutes: serverclog.py
+[2025-08-24 14:24:20] [FAILED] Server Clogging: FAILED: Script timed out after 2 minutes: serverclog.py
+[2025-08-24 14:24:20] [SUMMARY] Red Team attacks completed. Success: 2/6
+[2025-08-24 14:24:20] [WARNING] 4 attacks failed. Check logs for details.

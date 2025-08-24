@@ -1,0 +1,30 @@
+[FormFlooding] Starting attack on: http://www.google.com
+[FormFlooding] Configuration: 50 requests, 8 threads
+[FormFlooding] Attack completed
+[FormFlooding] Results: {'successful': 50, 'failed': 0, 'total_time': 1.2833423614501953, 'rate': 38.9607648761}
+
+[FormFlooding] Starting attack on: http://www.google.com
+[FormFlooding] Configuration: 50 requests, 8 threads
+[FormFlooding] Attack completed
+[FormFlooding] Results: {'successful': 50, 'failed': 0, 'total_time': 1.329972743988037, 'rate': 37.594755400829285}
+
+[FormFlooding] Starting attack on: http://www.google.com
+[FormFlooding] Configuration: 50 requests, 8 threads
+[FormFlooding] Attack completed
+[FormFlooding] Results: {'successful': 50, 'failed': 0, 'total_time': 1.3506033420562744, 'rate': 37.02049183728193}
+
+[FormFlooding] Starting attack on: http://httpbin.org
+[FormFlooding] Configuration: 50 requests, 8 threads
+[FormFlooding] Attack completed
+[FormFlooding] Results: {'successful': 50, 'failed': 0, 'total_time': 6.247460603713989, 'rate': 8.00325174844256}
+
+[FormFlooding] Starting attack on: http://httpbin.org
+[FormFlooding] Configuration: 50 requests, 8 threads
+[FormFlooding] Attack completed
+[FormFlooding] Results: {'successful': 50, 'failed': 0, 'total_time': 5.067096948623657, 'rate': 9.867583057312762}
+
+[FormFlooding] Starting attack on: http://httpbin.org
+[FormFlooding] Configuration: 50 requests, 8 threads
+[FormFlooding] Attack completed
+[FormFlooding] Results: {'successful': 50, 'failed': 0, 'total_time': 5.318506956100464, 'rate': 9.401134644122015}
+
